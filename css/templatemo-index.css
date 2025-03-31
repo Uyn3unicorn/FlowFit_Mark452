@@ -1403,6 +1403,15 @@ features
 
 
 @media (max-width: 991px) {
+
+		.feature-item .right-content p{
+		margin-bottom: 25px;
+	  }
+
+		.feature-item .right-content a.text-button {
+		  margin-left: 130px;
+		}
+	
 	.contact-info {
 		margin-top: 80px;
 	}
