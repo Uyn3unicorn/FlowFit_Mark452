@@ -111,7 +111,7 @@ small {
 
 .tm-slogan {
   font-size: 1.4rem;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .tm-home-hr {
@@ -597,6 +597,7 @@ p {
 
  .tm-home-left {
    margin-right: 50px;
+   padding: 0px 40px;
  }
 
  .tm-feature-box {
@@ -648,9 +649,6 @@ p {
     flex: 1 1 30%; /* Adjust width without breaking */
   }
 
-  .tm-contact-row {
-    flex-direction: column;
-  }
 
   .tm-call-to-action-col {
     flex-direction: column;
@@ -702,13 +700,7 @@ p {
     margin: 8px;
   }
 
-  .tm-contact-form {
-    padding: 45px;
-  }
 
-  .tm-contact-text {
-    padding: 60px;
-  }
 }
 
 
@@ -803,6 +795,23 @@ bootstrap.min.css:5
 
 @media (max-width: 767px) {
 
+  .tm-contact-row {
+    flex-direction: column; /* Stack columns on mobile */
+    display: flex;
+    flex-wrap: wrap; /* Ensures mobile responsiveness */
+    align-items: stretch; /* Make both columns the same height */
+    padding: 40px 10px !important;
+  }
+
+  .tm-contact-col-left, 
+  .tm-contact-col-right {
+    flex: 1;
+    width: 100%; /* Ensure full width */
+    justify-content: center;
+    align-items: center;
+  }
+
+
 	.navbar-toggle {
     position: relative;
     float: none;
@@ -887,6 +896,21 @@ bootstrap.min.css:5
   height: 100%; /* Forces the image to match the column height */
   object-fit: cover; /* Ensures proper cropping */
   border-radius: 10px;
+}
+
+.parallax-window {
+  background-size: cover; /* Ensures full coverage */
+  background-position: right top !important;
+
+}
+
+/* Adjust for Mobile */
+@media (max-width: 768px) {
+  .parallax-window {
+    background-attachment: scroll !important; /* Prevents excessive zoom */
+    background-size: contain !important; /* Keeps the full image visible */
+    background-position: right center !important; /* Pushes image to the right */
+  }
 }
 
 
